@@ -48,12 +48,14 @@ product-info-system/
 ├── products.php            # [Data Layer] Pengelola dataset produk & JSON file storage
 ├── functions.php           # [Processing Layer] Logika bisnis, fungsi kalkulasi, evaluasi status, & fungsi CRUD
 ├── index.php               # [Presentation Layer] Orchestrator modular & perender antarmuka HTML
-├── style.css               # [Styling Layer] Berkas CSS terpisah untuk tampilan modern, kartu ringkasan, & modal
-├── products.json           # [Database Storage] Berkas penyimpan dataset produk persisten
+├── Style/                  # [Styling Layer] Berkas CSS terpisah untuk tampilan modern, kartu ringkasan, & modal
+│   └── style.css
+├── Database/               # [Database Storage] Berkas penyimpan dataset produk persisten
+│   └── products.json
 └── Asset/                  # [Media Directory] Tempat menyimpan seluruh berkas gambar tangkapan layar
-    ├── screenshot_dashboard.png # Tangkapan layar tampilan dashboard utama
-    ├── screenshot_tambah.png    # Tangkapan layar modal tambah produk
-    └── screenshot_edit.png      # Tangkapan layar modal edit produk
+    ├── screenshot_dashboard.png
+    ├── screenshot_tambah.png
+    └── screenshot_edit.png
 ```
 
 ### Matriks Tanggung Jawab Modul:
@@ -61,10 +63,10 @@ product-info-system/
 | Nama Berkas | Layer Arsitektur | Tanggung Jawab Utama |
 | :--- | :--- | :--- |
 | `config.php` | **Configuration Layer** | Menyimpan konstanta konfigurasi global yang bersifat *immutable* menggunakan `define()` dan `const`. |
-| `products.php` | **Data Layer** | Menampung dan mengelola dataset mentah produk dalam bentuk *Multidimensional Associative Array* serta sinkronisasi ke `products.json`. |
+| `products.php` | **Data Layer** | Menampung dan mengelola dataset mentah produk dalam bentuk *Multidimensional Associative Array* serta sinkronisasi ke `Database/products.json`. |
 | `functions.php` | **Processing Layer** | Repositori fungsi murni untuk agregasi valuasi aset, format Rupiah, evaluasi status visual stok, serta fungsi pemroses CRUD. |
 | `index.php` | **Presentation Layer** | Merajut seluruh modul menggunakan `require_once`, menangani *request* POST/GET, serta merender tabel semantik HTML dan modal dialog. |
-| `style.css` | **Styling Layer** | Pengaturan layout responsif, kartu ringkasan eksekutif, badge status, modal dialog, serta pewarnaan baris stok kritis. |
+| `Style/style.css` | **Styling Layer** | Pengaturan layout responsif, kartu ringkasan eksekutif, badge status, modal dialog, serta pewarnaan baris stok kritis. |
 
 ---
 
