@@ -1,0 +1,66 @@
+[
+    {
+        "id": "PRD-001",
+        "nama": "Laptop Asus ROG Zephyrus",
+        "kategori": "Komputer & Laptop",
+        "harga": 24500000,
+        "stok": 7,
+        "deskripsi": "Laptop gaming ultra-slim dengan AMD Ryzen 9 dan RTX 4070."
+    },
+    {
+        "id": "PRD-002",
+        "nama": "Keyboard Mekanikal Wireless",
+        "kategori": "Aksesoris Komputer",
+        "harga": 850000,
+        "stok": 2,
+        "deskripsi": "Keyboard 75% layout dengan switch linear dan koneksi Bluetooth."
+    },
+    {
+        "id": "PRD-003",
+        "nama": "Monitor Ultrawide 34 Inch",
+        "kategori": "Komputer & Laptop",
+        "harga": 6200000,
+        "stok": 4,
+        "deskripsi": "Panel IPS 144Hz WQHD ideal untuk multitasking dan editing."
+    },
+    {
+        "id": "PRD-004",
+        "nama": "Mouse Ergonomis Vertikal",
+        "kategori": "Aksesoris Komputer",
+        "harga": 450000,
+        "stok": 1,
+        "deskripsi": "Desain ramah pergelangan tangan untuk mencegah RSI cedera."
+    },
+    {
+        "id": "PRD-005",
+        "nama": "Headset Noise Cancelling Pro",
+        "kategori": "Audio",
+        "harga": 1750000,
+        "stok": 0,
+        "deskripsi": "Peredam bising aktif premium dengan mikrofon studio clarity."
+    },
+    {
+        "id": "PRD-006",
+        "nama": "RAM DDR5 32GB Kit (2x16GB)",
+        "kategori": "Komponen",
+        "harga": 1950000,
+        "stok": 8,
+        "deskripsi": "Kecepatan 6000MHz CL30 dengan heatsink aluminium solid."
+    },
+    {
+        "id": "PRD-007",
+        "nama": "SSD NVMe M.2 2TB PCIe 4.0",
+        "kategori": "Penyimpanan Data",
+        "harga": 2100000,
+        "stok": 2,
+        "deskripsi": "Kecepatan baca hingga 7000 MB\/s untuk performa tanpa kompromi."
+    },
+    {
+        "id": "PRD-008",
+        "nama": "Acer Aspire 5",
+        "kategori": "Laptop",
+        "harga": 550000,
+        "stok": 10,
+        "deskripsi": "SSD 516, Ram 8, prosessor Intel Core 7"
+    }
+]
