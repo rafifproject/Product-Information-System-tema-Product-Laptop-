@@ -92,7 +92,7 @@ $nextSKU = generateSKU($katalogProduk);
             <div class="header-content">
                 <div>
                     <h1><?= htmlspecialchars(APP_NAME); ?></h1>
-                    <p>Sistem Pemantauan Aset Inventori Gudang & Management Data Produk (CRUD Native)</p>
+                    <p>Sistem Pemantauan Inventori Produk Laptop & Aksesoris Komputer (CRUD Native)</p>
                 </div>
                 <div class="header-actions">
                     <button type="button" class="btn btn-primary" onclick="openModal('createModal')">
@@ -200,7 +200,7 @@ $nextSKU = generateSKU($katalogProduk);
         </div>
 
         <footer class="app-footer">
-            <p>Pemrograman Web Pertemuan 2 - Product Information System (CRUD Native PHP)</p>
+            <p>Pemrograman Web Pertemuan 2 — Product Information System | Tema Produk Laptop (CRUD Native PHP)</p>
         </footer>
     </div>
 

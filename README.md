@@ -1,6 +1,7 @@
-# Mini Project 1: Product Information System
+# Mini Project 1: Product Information System — Tema Produk Laptop 💻
 
 > **Mata Kuliah:** Pemrograman Web (Pertemuan 2)  
+> **Tema Proyek:** Sistem Informasi Produk Laptop & Aksesoris Komputer  
 > **Fokus Utama:** Server-Side Programming, Multidimensional Associative Array, Modular Architecture (Separation of Concerns), & Operasi CRUD Native.  
 > **Engine:** PHP Native (Murni tanpa Framework & tanpa Database SQL Eksternal).
 
@@ -8,7 +9,7 @@
 
 ## 1. Ikhtisar & Tujuan Proyek
 
-Proyek ini bertujuan untuk merancang dan mengimplementasikan **Sistem Manajemen & Pemantauan Data Produk Inventori Gudang** berbasis *server-side* murni. 
+Proyek ini bertujuan untuk merancang dan mengimplementasikan **Sistem Manajemen & Pemantauan Data Produk Laptop dan Aksesoris Komputer** berbasis *server-side* murni. Dengan mengangkat **tema Produk Laptop**, aplikasi ini mensimulasikan pengelolaan inventori gudang yang mencakup berbagai komoditas seperti laptop gaming, keyboard mekanikal, monitor, mouse, headset, RAM, dan SSD.
 
 Aplikasi ini mengaplikasikan konsep **Multidimensional Associative Array** untuk mereplikasi tabel database di dalam memori runtime dan media berkas JSON. Seluruh struktur kode dibangun menggunakan arsitektur modular **Separation of Concerns (SoC)** yang memisahkan tanggung jawab aplikasi secara rapi ke dalam lapisan *Data Layer*, *Processing Layer*, *Configuration Layer*, *Presentation Layer*, dan *Styling Layer*. Selain itu, aplikasi dilengkapi dengan fitur interaktif **CRUD (Create, Read, Update, Delete)** untuk manajemen data secara real-time.
 
@@ -52,10 +53,13 @@ product-info-system/
 │   └── style.css
 ├── Database/               # [Database Storage] Berkas penyimpan dataset produk persisten
 │   └── products.json
-└── Asset/                  # [Media Directory] Tempat menyimpan seluruh berkas gambar tangkapan layar
-    ├── screenshot_dashboard.png
-    ├── screenshot_tambah.png
-    └── screenshot_edit.png
+├── Asset/                  # [Media Directory] Tempat menyimpan seluruh berkas gambar tangkapan layar
+│   ├── screenshot.png
+│   ├── screenshot_dashboard.png
+│   ├── screenshot_tambah.png
+│   └── screenshot_edit.png
+├── README.md               # Dokumentasi proyek lengkap
+└── .git/                   # Git version control
 ```
 
 ### Matriks Tanggung Jawab Modul:
@@ -74,7 +78,7 @@ product-info-system/
 
 ### A. Configuration Layer (`config.php`)
 Menampung konfigurasi sistem yang konstan (tidak dapat diubah di runtime):
-- `APP_NAME`: Nama aplikasi (`'Product Information System'`).
+- `APP_NAME`: Nama aplikasi (`'Product Information System — Tema Produk Laptop'`).
 - `APP_VERSION`: Versi sistem (`'1.0.0'`).
 - `STOK_KRITIS_THRESHOLD`: Ambang batas kuantitas stok kritis (nilai: `3`).
 - `MATA_UANG`: Simbol mata uang baku (`'Rp'`).
@@ -125,20 +129,64 @@ Berisi fungsi-fungsi terisolasi yang menerapkan prinsip *Single Responsibility P
 
 ## 6. Panduan Menjalankan & Menguji Aplikasi
 
-1. Buka Terminal / Command Prompt pada direktori proyek:
-   ```bash
-   cd "MK Pemograman Web/Mini Project (Product Information System)"
-   ```
+### Prasyarat
+- **XAMPP** (https://www.apachefriends.org/) atau **Laragon** (https://laragon.org/) sudah terinstal di komputer.
+- Pastikan **Apache** dan **PHP** sudah aktif/berjalan.
 
-2. Jalankan PHP Built-in Server:
-   ```bash
-   php -S localhost:8000
-   ```
+---
 
-3. Akses melalui Web Browser:
+### Opsi A: Menggunakan XAMPP
+
+1. **Salin folder proyek** ke dalam direktori `htdocs` XAMPP:
    ```text
-   http://localhost:8000/index.php
+   C:\xampp\htdocs\product-info-system\
    ```
+   Pastikan seluruh file proyek (`index.php`, `config.php`, `products.php`, `functions.php`, folder `Style/`, `Database/`, `Asset/`) berada di dalam folder tersebut.
+
+2. **Buka XAMPP Control Panel**, lalu klik tombol **Start** pada modul **Apache**.
+
+   > Pastikan status Apache berubah menjadi hijau (*Running*).
+
+3. **Akses aplikasi melalui Web Browser**:
+   ```text
+   http://localhost/product-info-system/index.php
+   ```
+
+4. ✅ Aplikasi siap digunakan! Anda bisa langsung melakukan operasi CRUD pada halaman web.
+
+---
+
+### Opsi B: Menggunakan Laragon
+
+1. **Salin folder proyek** ke dalam direktori `www` Laragon:
+   ```text
+   C:\laragon\www\product-info-system\
+   ```
+   Pastikan seluruh file proyek berada di dalam folder tersebut.
+
+2. **Buka Laragon**, lalu klik tombol **Start All** untuk mengaktifkan Apache dan MySQL.
+
+   > Laragon secara otomatis membuat *Virtual Host* berdasarkan nama folder di `www/`.
+
+3. **Akses aplikasi melalui Web Browser** (pilih salah satu):
+   - Via localhost biasa:
+     ```text
+     http://localhost/product-info-system/index.php
+     ```
+   - Via Pretty URL Laragon (otomatis):
+     ```text
+     http://product-info-system.test
+     ```
+
+4. ✅ Aplikasi siap digunakan!
+
+---
+
+### Catatan Penting
+
+> ⚠️ **Pastikan folder `Database/` memiliki izin tulis (*writable*)** agar operasi CRUD (Tambah, Edit, Hapus, Reset) dapat menyimpan data ke file `products.json`. Pada Windows dengan XAMPP/Laragon, hal ini biasanya sudah otomatis terpenuhi.
+
+> 💡 **Tidak memerlukan database MySQL/MariaDB.** Aplikasi ini menggunakan file JSON (`Database/products.json`) sebagai media penyimpanan data, sehingga Anda **hanya perlu mengaktifkan Apache** saja (MySQL tidak wajib di-start).
 
 ---
 
